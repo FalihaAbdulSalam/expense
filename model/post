@@ -1,0 +1,17 @@
+const mongoose=require('mongoose');
+
+
+const expenseSchema = new mongoose.Schema({
+    Expense_Category: {
+            type:String,
+            required:true
+        },
+        Expense_Date:Date,
+        Amount:Number,
+        Reference_No:Number,
+        Expense_for:String,
+        Description:String
+        
+      });
+
+ module.exports=mongoose.model('Expense',expenseSchema) ;
